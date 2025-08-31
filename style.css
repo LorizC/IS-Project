@@ -1,0 +1,365 @@
+/* ====================================
+   Base Reset & Body Styles
+==================================== */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url('/IS/images/img1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ====================================
+   Page Container
+==================================== */
+.page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ====================================
+   Background Blur
+==================================== */
+.background-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(61, 108, 202, 0.2);
+  z-index: -1;
+  filter: blur(8px);
+  transform: scale(1.05);
+  transition: background-color 0.4s ease;
+}
+
+/* ====================================
+   Theme Toggle Button
+==================================== */
+#theme-toggle {
+  display: none; /* hide checkbox */
+}
+
+.theme-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 48px;
+  height: 48px;
+  background-color: #2C3E91; /* Light mode circle */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.theme-button .material-icons {
+  font-size: 24px;
+  color: white;
+  position: absolute;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.light-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.dark-icon {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+/* ====================================
+   Content Wrapper
+==================================== */
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  gap: 2rem;
+}
+
+/* ====================================
+   Left Side: Welcome Message
+==================================== */
+.left-side {
+  flex: 1;
+  color: #1e3a8a;
+  padding: 20px;
+}
+
+.welcome-message h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.welcome-message p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.features-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #030b51;
+  margin-bottom: 15px;
+}
+
+.features-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* ====================================
+   Right Side: Form Background
+==================================== */
+.inFormBackground {
+  background-color: #ffffff66;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.2);
+}
+
+/* ====================================
+   Login Form
+==================================== */
+.inLoginForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #1e3a8a;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* ====================================
+   Input Fields
+==================================== */
+.inputGroup label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.inputGroup input {
+  width: 90%;
+  height: 45px;
+  padding: 0 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+::placeholder {
+  color: #666;
+}
+
+.inputGroup select {
+  width: 90%;
+  height: 45px;
+  padding: 0 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+#security-question,
+#gender {
+  color: #035107;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+/* ====================================
+   Buttons
+==================================== */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.submitForm {
+  width: 60%;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  background: #2C3E91;
+  color: #fff;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.submitForm:hover {
+  background: #1e2a63;
+}
+
+.signup-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: auto;
+  padding: 10px 20px;
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+/* ====================================
+   Sign Up Row
+==================================== */
+.signup-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.new-account {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  color: #1e3a8a;
+  white-space: nowrap;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ====================================
+   Dark Mode (Checkbox Toggle)
+==================================== */
+#theme-toggle:checked ~ .page {
+  color: #e0e0e0;
+}
+
+#theme-toggle:checked ~ .page .login-title,
+#theme-toggle:checked ~ .page .signup-title,
+#theme-toggle:checked ~ .page .inputGroup label {
+  color: #e0e0e0;
+}
+
+#theme-toggle:checked ~ .page .inputGroup input,
+#theme-toggle:checked ~ .page .inputGroup select {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+}
+
+#theme-toggle:checked ~ .page .inputGroup input::placeholder {
+  color: #bbb;
+}
+
+#theme-toggle:checked ~ .page #security-question option,
+#theme-toggle:checked ~ .page #gender option {
+  color: #e0e0e0;
+  background-color: #434343;
+}
+
+#theme-toggle:checked ~ .page .background-blur {
+  background-color: rgba(0, 0, 0, 0.759);
+}
+
+#theme-toggle:checked ~ .page .inFormBackground {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+}
+
+#theme-toggle:checked ~ .page .submitForm {
+  background-color: #fff;
+  color: #000;
+}
+
+#theme-toggle:checked ~ .page .submitForm:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+#theme-toggle:checked ~ .page .signup-row .new-account {
+  color: #ffffff;
+}
+
+#theme-toggle:checked ~ .page .theme-button {
+  background-color: #5f5f84;
+}
+#theme-toggle:checked ~ .page .theme-button .light-icon {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+#theme-toggle:checked ~ .page .theme-button .dark-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#theme-toggle:checked ~ .page .welcome-message,
+#theme-toggle:checked ~ .page .features-section h2{
+  color: #b7b8ff;
+}
+
+#theme-toggle:checked ~ .page .features-list li {
+  color: #e0e0e0;
+}
+
+/* ====================================
+   Responsive Design
+==================================== */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .left-side {
+    margin-bottom: 20px;
+  }
+}
